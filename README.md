@@ -7,7 +7,6 @@ Future Updates:
 1.5.7-autosave slot
 2.5.8-more sound
 3.7.6-character updates
-4.3.9-realistic environments
 5.9.0-read out loud dialogues(the characters can physically talk with sound)
 6.5.9-character emotions 
 7.8.9-multiplayer up to 4 players
