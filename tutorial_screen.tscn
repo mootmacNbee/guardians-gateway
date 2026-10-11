@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://pheftw1cpgpi"]
+
+[ext_resource type="Texture2D" uid="uid://dcvc58agdp1uw" path="res://embark.png" id="1_r8mpd"]
+
+[node name="Node2D" type="Node2D" unique_id=1926908358]
+
+[node name="tutorial" type="Label" parent="." unique_id=501076313]
+offset_top = 3.0
+offset_right = 1013.0
+offset_bottom = 260.0
+text = "DO NOT SKIP! Welcome to Guardian's Gateway. After this tutorial you will start the game. You will learn how to use starter controls:
+Move-WASD
+Select/Interact-Left Mouse button
+Move Camera-Right Mouse button(hold and drag)
+Jump-SPACE bar
+Menu-SHIFT
+Back-ESC
+Now that you know the basics you will learn more in the future of the game. 
+If you need to revisit this go to the tutorial section in the menu.
+Now go have fun not causing any trouble."
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=572030697]
+offset_left = 258.0
+offset_top = 276.0
+offset_right = 383.0
+offset_bottom = 316.0
+texture_normal = ExtResource("1_r8mpd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1374502802]
+position = Vector2(480, 191)

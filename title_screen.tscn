@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://qmlqccej70h"]
+
+[ext_resource type="Texture2D" uid="uid://difrjsci1xkr8" path="res://Title.png" id="1_05l2w"]
+[ext_resource type="Texture2D" uid="uid://dlibdmyv8unrn" path="res://Continue_button.png" id="1_v6p8y"]
+[ext_resource type="Texture2D" uid="uid://c7f6wca5nrsxj" path="res://GG_NEW_GAME_BUTTON.png" id="3_hafda"]
+[ext_resource type="Script" uid="uid://cqtdeny44ofhv" path="res://new_game.gd" id="4_013yr"]
+[ext_resource type="Texture2D" uid="uid://danjf6fpinndm" path="res://Load.png" id="9_rhgbh"]
+[ext_resource type="Texture2D" uid="uid://clmncsqqpxk51" path="res://Save_slot_1.png" id="10_skmiq"]
+[ext_resource type="Texture2D" uid="uid://b7bll1lwurh07" path="res://Save_slot_2.png" id="11_lf08s"]
+[ext_resource type="Texture2D" uid="uid://ddqqlsjgfhi32" path="res://Option_button.png" id="12_skmiq"]
+
+[node name="Title screen" type="Node3D" unique_id=1781131547]
+
+[node name="Title(Not working on Purpose)" type="TextureButton" parent="." unique_id=1315498257]
+offset_left = 237.0
+offset_top = 8.0
+offset_right = 472.0
+offset_bottom = 138.0
+disabled = true
+texture_normal = ExtResource("1_05l2w")
+stretch_mode = 0
+
+[node name="Continue(Not Working)" type="TextureButton" parent="." unique_id=404832902]
+offset_left = 120.0
+offset_top = 294.0
+offset_right = 414.0
+offset_bottom = 375.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_v6p8y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="New Game" type="Button" parent="." unique_id=1657433419]
+anchors_preset = -1
+anchor_right = 0.032
+anchor_bottom = 0.056
+offset_left = 160.0
+offset_top = 148.0
+offset_right = 521.136
+offset_bottom = 250.712
+mouse_default_cursor_shape = 2
+icon = ExtResource("3_hafda")
+flat = true
+script = ExtResource("4_013yr")
+
+[node name="Load" type="MenuButton" parent="." unique_id=726580761]
+offset_left = 52.0
+offset_top = 384.0
+offset_right = 245.0
+offset_bottom = 516.0
+mouse_default_cursor_shape = 2
+button_pressed = true
+text = "Load"
+icon = ExtResource("9_rhgbh")
+expand_icon = true
+switch_on_hover = true
+item_count = 2
+popup/item_0/text = "Slot 1"
+popup/item_0/icon = ExtResource("10_skmiq")
+popup/item_0/id = 43
+popup/item_1/text = "Slot 2"
+popup/item_1/icon = ExtResource("11_lf08s")
+popup/item_1/id = 12
+
+[node name="Load screen" type="PopupMenu" parent="Load" unique_id=242621049]
+oversampling_override = 1.0
+
+[node name="Option" type="OptionButton" parent="." unique_id=1906432446]
+offset_left = 501.0
+offset_top = 95.0
+offset_right = 677.0
+offset_bottom = 126.0
+mouse_default_cursor_shape = 2
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "-"
+popup/item_0/id = 0
+popup/item_1/text = "Hardcore Mode"
+popup/item_1/id = 1
+popup/item_1/disabled = true
+popup/item_2/text = "Special Side Story"
+popup/item_2/id = 3
+popup/item_2/disabled = true
+
+[node name="TextureButton" type="TextureButton" parent="Option" unique_id=1199077662]
+layout_mode = 0
+offset_left = 41.0
+offset_top = -90.0
+offset_right = 126.0
+offset_bottom = -7.0
+disabled = true
+texture_normal = ExtResource("12_skmiq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1446912550]
+position = Vector2(344, 237)
+
+[connection signal="pressed" from="New Game" to="New Game" method="_on_pressed"]
